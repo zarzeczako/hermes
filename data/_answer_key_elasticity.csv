@@ -1,0 +1,65 @@
+﻿ProductID,ProductName,Category,TrueElasticity
+1,LaserJet Compact 210,Printers,-1.92
+2,InkFlow Home 150,Printers,-2.15
+3,OfficeJet Pro 400,Printers,-2.01
+4,PhotoPrint Studio X,Printers,-1.73
+5,LaserJet Business 800,Printers,-1.65
+6,Ink Cartridge - Black XL,Ink & Toner,-0.3
+7,Ink Cartridge - Color Pack,Ink & Toner,-0.54
+8,Toner Cartridge - Standard,Ink & Toner,-0.6
+9,Toner Cartridge - High Yield,Ink & Toner,-0.45
+10,Photo Ink Cartridge Set,Ink & Toner,-0.58
+11,Ink Cartridge - Black Standard,Ink & Toner,-0.56
+12,Ink Cartridge - Cyan,Ink & Toner,-0.37
+13,Ink Cartridge - Magenta,Ink & Toner,-0.47
+14,Ink Cartridge - Yellow,Ink & Toner,-0.59
+15,Toner Cartridge - Business Pack,Ink & Toner,-0.56
+16,UltraBook Air 13,Laptops,-1.78
+17,ProBook 15 Business,Laptops,-1.85
+18,Gaming Laptop RTX Series,Laptops,-1.93
+19,ConvertiBook 2-in-1,Laptops,-1.51
+20,UltraBook Pro 14,Laptops,-1.45
+21,Laptop Backpack Pro,Laptop Accessories,-1.21
+22,Laptop Sleeve 14-inch,Laptop Accessories,-1.31
+23,USB-C Docking Station,Laptop Accessories,-0.93
+24,Laptop Stand Aluminum,Laptop Accessories,-1.45
+25,Cooling Pad,Laptop Accessories,-1.22
+26,Universal Laptop Charger 65W,Laptop Accessories,-1.44
+27,Laptop Privacy Screen,Laptop Accessories,-0.95
+28,External SSD Enclosure,Laptop Accessories,-1.37
+29,Wireless Mouse,Peripherals,-1.19
+30,Wireless Keyboard,Peripherals,-1.03
+31,Mechanical Keyboard RGB,Peripherals,-1.3
+32,Ergonomic Vertical Mouse,Peripherals,-1.42
+33,27-inch Monitor FHD,Peripherals,-1.59
+34,27-inch Monitor 4K,Peripherals,-1.43
+35,Webcam HD 1080p,Peripherals,-1.64
+36,Webcam 4K Pro,Peripherals,-1.28
+37,Graphics Tablet,Peripherals,-1.07
+38,Trackball Mouse,Peripherals,-1.29
+39,USB-C Cable 1m,Cables & Connectivity,-2.14
+40,USB-C Cable 2m,Cables & Connectivity,-2.04
+41,HDMI Cable 2m,Cables & Connectivity,-1.87
+42,USB-C to HDMI Adapter,Cables & Connectivity,-1.92
+43,USB Hub 7-Port,Cables & Connectivity,-2.18
+44,DisplayPort Cable,Cables & Connectivity,-1.84
+45,Ethernet Cable Cat6,Cables & Connectivity,-2.03
+46,Multi-Port Travel Adapter,Cables & Connectivity,-1.83
+47,Bluetooth Headphones Over-Ear,Audio,-1.79
+48,Wireless Earbuds,Audio,-1.21
+49,Noise Cancelling Headphones,Audio,-1.35
+50,Portable Bluetooth Speaker,Audio,-1.4
+51,Soundbar Compact,Audio,-1.67
+52,Wired Earphones,Audio,-1.74
+53,Gaming Headset,Audio,-1.53
+54,Studio Monitor Headphones,Audio,-1.71
+55,Phone Case - Silicone,Mobile Cases & Protection,-0.45
+56,Phone Case - Rugged,Mobile Cases & Protection,-0.55
+57,Screen Protector - Tempered Glass,Mobile Cases & Protection,-0.36
+58,Screen Protector - Privacy,Mobile Cases & Protection,-0.43
+59,Car Phone Mount,Mobile Cases & Protection,-0.31
+60,Power Bank 10000mAh,Mobile Charging,-1.23
+61,Power Bank 20000mAh,Mobile Charging,-1.26
+62,Wireless Charger Pad,Mobile Charging,-1.07
+63,USB Wall Charger 20W,Mobile Charging,-1.19
+64,MagSafe Charger Compatible,Mobile Charging,-1.31

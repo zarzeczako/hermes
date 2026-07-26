@@ -1,0 +1,65 @@
+﻿ProductID,ProductName,Category,UnitCost,BasePrice
+1,LaserJet Compact 210,Printers,312.81,383.6
+2,InkFlow Home 150,Printers,190.73,228.27
+3,OfficeJet Pro 400,Printers,509.45,579.83
+4,PhotoPrint Studio X,Printers,216.75,253.63
+5,LaserJet Business 800,Printers,145.83,185.79
+6,Ink Cartridge - Black XL,Ink & Toner,3.77,30.14
+7,Ink Cartridge - Color Pack,Ink & Toner,6.61,50.97
+8,Toner Cartridge - Standard,Ink & Toner,13.22,60.78
+9,Toner Cartridge - High Yield,Ink & Toner,5.32,37.48
+10,Photo Ink Cartridge Set,Ink & Toner,4.38,23.37
+11,Ink Cartridge - Black Standard,Ink & Toner,13.71,54.13
+12,Ink Cartridge - Cyan,Ink & Toner,6.16,26.2
+13,Ink Cartridge - Magenta,Ink & Toner,6.65,33.1
+14,Ink Cartridge - Yellow,Ink & Toner,6.29,25.6
+15,Toner Cartridge - Business Pack,Ink & Toner,7.07,35.43
+16,UltraBook Air 13,Laptops,2735.11,3549.86
+17,ProBook 15 Business,Laptops,4106.47,5217.44
+18,Gaming Laptop RTX Series,Laptops,2779.5,3990.77
+19,ConvertiBook 2-in-1,Laptops,3644.72,5324.86
+20,UltraBook Pro 14,Laptops,1748.31,2165.33
+21,Laptop Backpack Pro,Laptop Accessories,15.82,44.6
+22,Laptop Sleeve 14-inch,Laptop Accessories,89.69,198.7
+23,USB-C Docking Station,Laptop Accessories,70.77,136.15
+24,Laptop Stand Aluminum,Laptop Accessories,54.17,112.95
+25,Cooling Pad,Laptop Accessories,44.04,103.3
+26,Universal Laptop Charger 65W,Laptop Accessories,55.01,144.04
+27,Laptop Privacy Screen,Laptop Accessories,86.92,181.12
+28,External SSD Enclosure,Laptop Accessories,41.35,116.29
+29,Wireless Mouse,Peripherals,361.72,709.26
+30,Wireless Keyboard,Peripherals,60.46,120.5
+31,Mechanical Keyboard RGB,Peripherals,297.31,584.72
+32,Ergonomic Vertical Mouse,Peripherals,479.3,926.24
+33,27-inch Monitor FHD,Peripherals,240.6,633.91
+34,27-inch Monitor 4K,Peripherals,213.41,522.35
+35,Webcam HD 1080p,Peripherals,47.02,133.99
+36,Webcam 4K Pro,Peripherals,382.62,945.89
+37,Graphics Tablet,Peripherals,171.33,483.13
+38,Trackball Mouse,Peripherals,204.8,511.96
+39,USB-C Cable 1m,Cables & Connectivity,19.08,57.42
+40,USB-C Cable 2m,Cables & Connectivity,16.13,47.94
+41,HDMI Cable 2m,Cables & Connectivity,17.83,52.03
+42,USB-C to HDMI Adapter,Cables & Connectivity,18.12,47.15
+43,USB Hub 7-Port,Cables & Connectivity,17.44,51.7
+44,DisplayPort Cable,Cables & Connectivity,23.43,63.01
+45,Ethernet Cable Cat6,Cables & Connectivity,13.92,46.65
+46,Multi-Port Travel Adapter,Cables & Connectivity,24.57,64.23
+47,Bluetooth Headphones Over-Ear,Audio,324.81,580.81
+48,Wireless Earbuds,Audio,192.18,454.61
+49,Noise Cancelling Headphones,Audio,63.89,152.78
+50,Portable Bluetooth Speaker,Audio,49.89,125.57
+51,Soundbar Compact,Audio,43.52,76.88
+52,Wired Earphones,Audio,90.54,176.78
+53,Gaming Headset,Audio,59.91,141.37
+54,Studio Monitor Headphones,Audio,212.85,492.07
+55,Phone Case - Silicone,Mobile Cases & Protection,5.63,21.33
+56,Phone Case - Rugged,Mobile Cases & Protection,10.95,38.27
+57,Screen Protector - Tempered Glass,Mobile Cases & Protection,4.6,27.08
+58,Screen Protector - Privacy,Mobile Cases & Protection,7.18,32.07
+59,Car Phone Mount,Mobile Cases & Protection,5.55,35.4
+60,Power Bank 10000mAh,Mobile Charging,59.51,157.39
+61,Power Bank 20000mAh,Mobile Charging,51.17,96.38
+62,Wireless Charger Pad,Mobile Charging,37.92,105.21
+63,USB Wall Charger 20W,Mobile Charging,23.6,58.78
+64,MagSafe Charger Compatible,Mobile Charging,84.31,169.79
