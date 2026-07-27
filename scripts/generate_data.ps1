@@ -1,14 +1,7 @@
-# HERMES - generator syntetycznych danych sprzedazowych (v2 - katalog 64 SKU / 8 kategorii)
-# Model popytu: Q = Q0 * (P/P0)^E * (Pc/Pc0)^crossE * sezonowosc * trend * szum_lognormalny
-# Elastycznosc (E) jest "wszyta" celowo per produkt - w Kroku 6 walidujemy, ze model DAX ja odzyskuje.
-#
-# Katalog zawiera model "razor-and-blades": Drukarki (cienka marza, elastyczne, E ~ -1.6..-2.2)
-# vs Tusze/Tonery (gruba marza, nieelastyczne, E ~ -0.2..-0.6) - lock-in konsumenta po zakupie drukarki.
 
 Get-Random -SetSeed 42 | Out-Null
 
-# WAZNE: wymuszamy kropke jako separator dziesietny (bez tego polska lokalizacja
-# zapisuje "392,77" z przecinkiem i rozwala kolumny CSV).
+
 [System.Threading.Thread]::CurrentThread.CurrentCulture = [System.Globalization.CultureInfo]::InvariantCulture
 
 $outDir = "C:\Users\micha\Desktop\hermes\data"
@@ -25,8 +18,6 @@ function Get-RandomDouble {
     return $Min + (Get-Random -Minimum 0.0 -Maximum 1.0) * ($Max - $Min)
 }
 
-# --- Definicje kategorii: zakresy cen, elastycznosci, cross-elastycznosci, wolumenu bazowego, kosztu (jako % ceny) ---
-# CostFrac = koszt jako ulamek ceny -> nizszy CostFrac = grubsza marza (klasyczny model "blades")
 $categories = @(
     @{ Name="Printers";                  Items=@("LaserJet Compact 210","InkFlow Home 150","OfficeJet Pro 400","PhotoPrint Studio X","LaserJet Business 800");
        PriceMin=150; PriceMax=650;  ElastMin=-2.2; ElastMax=-1.6; CrossMin=0.15; CrossMax=0.30; Q0Min=6;  Q0Max=18;  CostFracMin=0.72; CostFracMax=0.88 },
@@ -56,7 +47,7 @@ $categories = @(
        PriceMin=35;  PriceMax=180;  ElastMin=-1.5; ElastMax=-0.9; CrossMin=0.20; CrossMax=0.40; Q0Min=20; Q0Max=60;  CostFracMin=0.35; CostFracMax=0.55 }
 )
 
-# --- Budowa katalogu 64 produktow ---
+# --- 64 produkty ---
 $products = New-Object System.Collections.Generic.List[hashtable]
 $nextId = 1
 foreach ($cat in $categories) {
@@ -79,7 +70,6 @@ foreach ($cat in $categories) {
 $startDate = [datetime]"2024-01-01"
 $endDate   = [datetime]"2025-12-31"
 
-# Mnozniki sezonowe wg miesiaca (Q4 gorka, styczen dolek)
 $monthFactor = @{ 1=0.90; 2=0.93; 3=0.99; 4=1.00; 5=1.02; 6=1.00; 7=0.97; 8=0.99; 9=1.04; 10=1.08; 11=1.20; 12=1.24 }
 
 $factRows = New-Object System.Collections.Generic.List[string]
