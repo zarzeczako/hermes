@@ -133,7 +133,7 @@ Katalog produktów obejmuje m.in. Drukarki, Tusze i Tonery, Laptopy, Peryferia, 
 
 ---
 
-## Jak to odtworzyć
+## Jak to odtworzyć (WKRÓTCE)
 
 1. Wygeneruj dane: uruchom `scripts/generate_data.ps1` w PowerShell — utworzy pliki CSV w `data/`.
 2. Otwórz `HERMES.pbix` w Power BI Desktop i odśwież dane (**Narzędzia główne → Odśwież**).
