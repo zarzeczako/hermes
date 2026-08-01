@@ -7,17 +7,21 @@ Projekt Power BI, który odpowiada na jedno pytanie, którego większość firm 
 
 HERMES modeluje **elastyczność cenową popytu** (jak bardzo klienci reagują na zmianę ceny) na podstawie danych sprzedażowych, a następnie pozwala symulować scenariusze cenowe w czasie rzeczywistym — bez arkusza kalkulacyjnego, bez proszenia działu IT o nowy raport, bez zgadywania.
 
----
+> [!TIP]
+> **📊 [Pobierz pełny, interaktywny raport — `HERMES.pbix`](HERMES.pbix)** — otwórz w darmowym [Power BI Desktop](https://powerbi.microsoft.com/desktop/), żeby samodzielnie przeklikać suwak symulacji cenowej, cross-filtering między wykresami i warstwę DirectQuery na żywo z PostgreSQL — nie tylko zrzuty ekranu niżej.
 
-## Zrzuty ekranu
-
-**Dashboard główny** — KPI, trend przychodu, przychód wg kategorii, symulacja What-If:
-
-![Dashboard główny](media/main_dashboard.png)
-
-**Strona QA / walidacji modelu** — porównanie elastyczności policzonej przez model z wartością referencyjną:
-
-![QA — walidacja modelu](media/qa_dashboard.png)
+<table>
+  <tr>
+    <td width="50%">
+      <img src="media/main_dashboard.png" alt="Dashboard główny HERMES">
+      <p align="center"><sub><b>Pricing Intelligence Dashboard</b> — KPI, trend przychodu, przychód wg kategorii, suwak symulacji cenowej i "żywa" pozycja rynkowa z PostgreSQL</sub></p>
+    </td>
+    <td width="50%">
+      <img src="media/qa_dashboard.png" alt="Strona QA — walidacja modelu HERMES">
+      <p align="center"><sub><b>QA / Model Validation</b> — elastyczność policzona przez regresję LINESTX zestawiona z wartością referencyjną, formatowanie warunkowe pokazuje jakość dopasowania</sub></p>
+    </td>
+  </tr>
+</table>
 
 ---
 
