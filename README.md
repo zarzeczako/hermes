@@ -40,7 +40,7 @@ Firmy, które ustalają ceny "po równo" dla całego katalogu, zostawiają pieni
 - **Symulacja cenowa w czasie rzeczywistym (What-If)** — suwak zmiany ceny (parametr Power BI, tabela odłączona) połączony z policzoną elastycznością, przeliczający symulowany wolumen, przychód i marżę na żywo.
 - **Miara "Ryzyko" dla nietechnicznych odbiorców** — warstwa tłumacząca wynik regresji na jedno zdanie w prostym języku ("bezpieczne / neutralne / ryzykowne"), uwzględniająca też pewność samego oszacowania (R²), nie tylko kierunek zmiany.
 - **Paleta kolorów zwalidowana matematycznie pod kątem dostępności** — dobór kolorów przetestowany symulacją daltonizmu (protanopia/deuteranopia) w przestrzeni OKLab, nie dobrany "na oko".
-- **Model gwiazdy + Composite Model (w budowie)** — klasyczna architektura fakt/wymiary jako fundament pod docelową warstwę Import + DirectQuery.
+- **Composite Model (Import + DirectQuery)** — historia sprzedaży zaimportowana, ale aktualna cena konkurencji pobierana na żywo z bazy PostgreSQL przez DirectQuery. Miara `Live Price Gap %` łączy to z symulacją What-If, odpowiadając na pytanie "czy po tej zmianie ceny nadal będziemy konkurencyjni".
 
 ---
 
@@ -89,6 +89,7 @@ Dodatkowo: tabela `_Measures` (kontener na wszystkie miary DAX), odłączony par
 | Logika analityczna | DAX (`LINESTX`, regresja wieloraka, `SELECTEDVALUE`, `LOOKUPVALUE`) |
 | Generowanie danych testowych | PowerShell |
 | Motyw wizualny | Własny theme JSON, zwalidowany pod kątem dostępności (OKLab + symulacja CVD) |
+| Źródło DirectQuery | PostgreSQL 17 (tabela `live_competitor_prices`) |
 
 ---
 
@@ -102,7 +103,9 @@ hermes/
 │   ├── dim_product.csv              # 64 produkty w 9 kategoriach
 │   └── _answer_key_elasticity.csv   # referencyjna elastyczność (walidacja modelu)
 ├── scripts/
-│   └── generate_data.ps1            # generator syntetycznych danych sprzedażowych
+│   ├── generate_data.ps1             # generator syntetycznych danych sprzedażowych
+│   ├── generate_postgres_seed.ps1    # generator seeda dla live_competitor_prices
+│   └── seed_postgres.sql             # SQL: tabela + 64 wiersze "żywych" cen konkurencji
 ├── theme/
 │   └── HERMES_theme.json            # motyw wizualny Power BI
 └── media/
@@ -128,13 +131,15 @@ Katalog produktów obejmuje m.in. Drukarki, Tusze i Tonery, Laptopy, Peryferia, 
 - [x] Parametr What-If (symulowana zmiana ceny)
 - [x] Regresja elastyczności cenowej (`LINESTX`, regresja wieloraka) + strona walidacji modelu
 - [x] Symulacja cenowa (wpływ na wolumen / przychód / marżę) + miara "Ryzyko" w prostym języku
-- [ ] Warstwa Composite Model (Import + DirectQuery)
-- [ ] Finalny, w pełni rozbudowany dashboard + storytelling portfolio
+- [x] Warstwa Composite Model (Import + DirectQuery, PostgreSQL) + `Live Price Gap %`
+- [x] Finalny dashboard + storytelling portfolio
 
 ---
 
-## Jak to odtworzyć (WKRÓTCE)
+## Jak to odtworzyć
 
 1. Wygeneruj dane: uruchom `scripts/generate_data.ps1` w PowerShell — utworzy pliki CSV w `data/`.
 2. Otwórz `HERMES.pbix` w Power BI Desktop i odśwież dane (**Narzędzia główne → Odśwież**).
 3. (Opcjonalnie) zaimportuj motyw wizualny: **Widok → Motywy → Przeglądaj w poszukiwaniu motywów** → wskaż `theme/HERMES_theme.json`.
+4. Do warstwy DirectQuery: zainstaluj PostgreSQL 17, utwórz bazę `hermes`, uruchom `scripts/generate_postgres_seed.ps1`, a następnie wykonaj wygenerowany `scripts/seed_postgres.sql` (np. w psql lub pgAdmin) — utworzy to tabelę `live_competitor_prices`.
+5. W Power BI: **Pobierz dane → PostgreSQL database**, tryb **DirectQuery**, serwer `localhost`, baza `hermes` — połącz relacją z `dim_product` po `ProductID` / `product_id`.
